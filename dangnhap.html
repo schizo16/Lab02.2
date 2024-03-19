@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function displayInput() {
+            // Get the value entered in the input field with id 'maND'
+            var maNDValue = document.getElementById('maND').value;
+            
+            // Display the value in the span with id 'maNDDisplay'
+            document.getElementById('maNDDisplay').innerText = maNDValue;
+            
+            // Prevent the form from submitting
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <form action="#" method="post" onsubmit="return displayInput()">
+        <h2 style="text-align: center;color: brown;">Đăng nhập</h2>
+        <table cellpadding="5" cellspacing="0" border="1" align="center" style="background-color: aquamarine;">
+            <tr>
+                <td>
+                    <label for="maND">Mã người dùng:</label>
+                </td>
+                <td>
+                    <input type="text" name="maND" id="maND">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="matKhau">Mật khẩu:</label>
+                </td>
+                <td>
+                    <input type="password" name="matKhau" id="matKhau">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                   <button type="submit">Đồng ý</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <p>
+                        <span id="maNDDisplay" style="color: blue;"></span>
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
